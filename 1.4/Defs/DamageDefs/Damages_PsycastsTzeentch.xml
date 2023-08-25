@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- TZEENTCH -->
+    <!-- Bolt of Change -->
+
+    <DamageDef>
+        <defName>BEWH_Change</defName>
+        <label>mutation</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <makesBlood>false</makesBlood>
+        <deathMessage>{0} has been mutated to death.</deathMessage>
+        <hediff>BEWH_BoltChange</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <defaultDamage>38</defaultDamage>
+        <defaultArmorPenetration>2.7</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Storm of Change -->
+
+    <DamageDef>
+        <defName>BEWH_ChangeStorm</defName>
+        <label>mutation</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <makesBlood>false</makesBlood>
+        <deathMessage>{0} has been mutated to death.</deathMessage>
+        <hediff>BEWH_StormChange</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+        <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+        <soundExplosion>BEWH_NoSound</soundExplosion>
+        <defaultDamage>23</defaultDamage>
+        <defaultArmorPenetration>2.7</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Firestorm -->
+
+    <DamageDef>
+        <defName>BEWH_Firestorm</defName>
+        <workerClass>Core40k.DamageWorker_WarpFlame</workerClass>
+        <label>firestorm flame</label>
+        <hasForcefulImpact>true</hasForcefulImpact>
+        <makesBlood>false</makesBlood>
+        <canInterruptJobs>false</canInterruptJobs>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has warp-burned to death.</deathMessage>
+        <hediff>BEWH_WarpBurn</hediff>
+        <soundExplosion>BEWH_NoSound</soundExplosion>
+        <armorCategory>Heat</armorCategory>
+        <minDamageToFragment>25</minDamageToFragment>
+        <defaultDamage>7</defaultDamage>
+        <defaultArmorPenetration>0.1</defaultArmorPenetration>
+        <combatLogRules>Damage_Flame</combatLogRules>
+        <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    </DamageDef>
+
+   
+</Defs>

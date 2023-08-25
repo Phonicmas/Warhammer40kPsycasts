@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- SLAANESH -->
+    <!-- Lash -->
+
+    <DamageDef>
+        <defName>BEWH_Lash</defName>
+        <label>lash</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been whipped to death.</deathMessage>
+        <hediff>Shredded</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <defaultDamage>40</defaultDamage>
+        <defaultArmorPenetration>0.2</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Hellshriek -->
+
+    <DamageDef>
+        <defName>BEWH_Hellshriek</defName>
+        <label>hellshriek</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been shrieked to death.</deathMessage>
+        <hediff>BEWH_SoundTear</hediff>
+        <hediffSkin>BEWH_SoundTear</hediffSkin>
+        <hediffSolid>BEWH_SoundTear</hediffSolid>
+        <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+        <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+        <soundExplosion>BEWH_NoSound</soundExplosion>
+        <defaultDamage>10</defaultDamage>
+        <defaultArmorPenetration>10</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Symphony of pain -->
+
+    <DamageDef>
+        <defName>BEWH_SymphonyOfPain</defName>
+        <label>pain</label>
+        <workerClass>Psycasts40k.DamageWorker_SymphonyPain</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} died from pain.</deathMessage>
+        <hediff>BEWH_SymphonyOfPainInjury</hediff>
+        <hediffSkin>BEWH_SymphonyOfPainInjury</hediffSkin>
+        <hediffSolid>BEWH_SymphonyOfPainInjury</hediffSolid>
+        <defaultDamage>1</defaultDamage>
+        <defaultArmorPenetration>10</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+        <bluntStunDuration>1</bluntStunDuration>
+    </DamageDef>
+
+
+</Defs>

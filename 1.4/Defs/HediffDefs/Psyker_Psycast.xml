@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Might of Heroes -->
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>BEWH_MightOfHeroes</defName>
+        <label>might of heroes</label>
+        <description>The might of ancient heroes strengthens you.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <MeleeDamageFactor MayRequire="Ludeon.Rimworld.Biotech">1.5</MeleeDamageFactor>
+                    <MeleeHitChance>2</MeleeHitChance>
+                    <MoveSpeed>2</MoveSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Machine Curse -->
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>BEWH_MachineCurse</defName>
+        <label>machine curse</label>
+        <description>Bep bop.</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.35</setMax>
+                    </li>
+                </capMods>
+                <statFactors>
+                    <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+                    <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+                    <ArmorRating_Heat>0.5</ArmorRating_Heat>
+                    <MoveSpeed>0.5</MoveSpeed>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Force Barrier -->
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>BEWH_ForceBarrier</defName>
+        <label>force barrier</label>
+        <description>A barrier protects this pawn from incoming bullets</description>
+        <hediffClass>VanillaPsycastsExpanded.Hediff_Overshield</hediffClass>
+        <isBad>false</isBad>
+    </HediffDef>
+
+    <!-- Nightshroud -->
+
+    <HediffDef>
+        <defName>BEWH_Nightshroud</defName>
+        <label>nightshrouded</label>
+        <description>Psychically-induced invisibility.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_DisappearsOnDeath"/>
+            <li>
+                <compClass>VanillaPsycastsExpanded.Nightstalker.HediffComp_DissapearsOnAttack</compClass>
+            </li>
+            <li>
+                <compClass>HediffComp_Invisibility</compClass>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Shrouding -->
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>BEWH_Shrouding</defName>
+        <label>shrouded</label>
+        <description>Psychically obscured vision</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <AimingDelayFactor>1.4</AimingDelayFactor>
+                    <RangedCooldownFactor MayRequire="Ludeon.Rimworld.Biotech">1.4</RangedCooldownFactor>
+                </statFactors>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <postFactor>0.8</postFactor>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Null Zone -->
+
+    <HediffDef ParentName="PsycastHediffBase">
+        <defName>BEWH_NullZone</defName>
+        <label>null zone</label>
+        <description>Psychically weakened will</description>
+        <isBad>false</isBad>
+        <stages>
+            <li>
+                <statFactors>
+                    <PsychicSensitivity>0.05</PsychicSensitivity>
+                </statFactors>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

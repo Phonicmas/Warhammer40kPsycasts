@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="VFECore.PatchOperationToggableSequence">
+		<enabled>False</enabled>
+		<mods>
+			<li>Warhammer 40k - Psycasts</li>
+			<li>Vanilla Psycasts Expanded</li>
+			<li>Chaos (Warhammer 40k) Unofficial 1.4</li>
+		</mods>
+		<label>Make thousand sons use chaos psyker path (Requires: "Change Chaos Marine Geneseed" to have any effect)</label>
+		<operations>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/PawnKindDef[defName = "TSMarine"]</xpath>
+				<value>
+					<modExtensions>
+						<li Class="VanillaPsycastsExpanded.PawnKindAbilityExtension_Psycasts">
+							<implantDef>VPE_PsycastAbilityImplant</implantDef>
+							<initialLevel>15</initialLevel>
+							<statUpgradePoints>4~10</statUpgradePoints>
+							<unlockedPaths>
+								<BEWH_ChaosPsyker>1~5|5~9</BEWH_ChaosPsyker>
+							</unlockedPaths>
+						</li>
+					</modExtensions>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

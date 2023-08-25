@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Acquiescence -->
+
+	<ThoughtDef>
+		<defName>BEWH_Acquiescence</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>Acquiescence</label>
+				<description>Oh my, oh wow... oh.. hehehehe so naughty</description>
+				<baseMoodEffect>40</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Mindscourge -->
+
+	<ThoughtDef>
+		<defName>BEWH_Mindscourge</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>Mindscourge</label>
+				<description>aaAAAAAAAAAHHHHHHHHhhhh</description>
+				<baseMoodEffect>-40</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

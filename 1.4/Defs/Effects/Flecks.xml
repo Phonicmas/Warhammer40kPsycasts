@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Storm of Change -->
+
+    <FleckDef ParentName="FleckBase">
+        <defName>BEWH_ChangeExplosion</defName>
+        <solidTime>0.3</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+            <texPath>Effects/ChaosShared/StormOfChange</texPath>
+            <ticksPerFrame>7</ticksPerFrame>
+            <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(20, 20)</drawSize>
+        </graphicData>
+    </FleckDef>
+
+    <!-- Rot Burst -->
+
+    <FleckDef ParentName="FleckBase">
+        <defName>BEWH_RotBustExplosion</defName>
+        <solidTime>0.3</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+            <texPath>Effects/Necropath/ParalysisPulse</texPath>
+            <ticksPerFrame>7</ticksPerFrame>
+            <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(20, 20)</drawSize>
+        </graphicData>
+    </FleckDef>
+
+    <!-- Fire Storm -->
+
+    <FleckDef ParentName="FleckBase">
+        <defName>BEWH_FirestormExplosion</defName>
+        <solidTime>0.3</solidTime>
+        <fadeOutTime>0.1</fadeOutTime>
+        <altitudeLayer>MoteOverhead</altitudeLayer>
+        <graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+            <texPath>Effects/Conflagrator/Explosion</texPath>
+            <ticksPerFrame>7</ticksPerFrame>
+            <graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Fleck_Animated</graphicClass>
+            <shaderType>MoteGlow</shaderType>
+            <drawSize>(20, 20)</drawSize>
+            <color>(163, 0, 142)</color>
+        </graphicData>
+    </FleckDef>
+    
+</Defs>

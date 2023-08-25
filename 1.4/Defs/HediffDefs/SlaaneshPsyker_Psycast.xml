@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Acquiescence -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_Acquiescence</defName>
+		<label>Acquiescence</label>
+		<description>Maybe he IS my friend after all...</description>
+		<initialSeverity>0.1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<minSeverity>0.1</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.16</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.2</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.24</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.3</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.32</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.4</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.40</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.5</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.48</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.56</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.7</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.64</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<minSeverity>0.8</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.72</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>18</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_Effecter">
+				<stateEffecter>VPE_Bliss</stateEffecter>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Lash of Submission -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_LashOfSubmission</defName>
+		<label>Lash of Submission</label>
+		<description>Psychically-induced mind control, giving absolute control to another person.</description>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.30</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li>
+				<compClass>VanillaPsycastsExpanded.Harmonist.HediffComp_MindControl</compClass>
+			</li>
+			<li Class="VanillaPsycastsExpanded.Graphics.HediffCompProperties_Mote">
+				<compClass>VanillaPsycastsExpanded.Graphics.HediffComp_MoteOverHead</compClass>
+				<mote>VPE_Mote_CastPsycast_Red</mote>
+				<color>(1, 0, 0)</color>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Celeritous Sense -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_CeleritousSense</defName>
+		<label>celeritous sense</label>
+		<description>The flows of light and sound is directed.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<NegotiationAbility>1.25</NegotiationAbility>
+					<MeleeDodgeChance>1.35</MeleeDodgeChance>
+					<ShootingAccuracyPawn>1.35</ShootingAccuracyPawn>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Talking</capacity>
+						<offset>1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Hellshriek -->
+
+	<HediffDef ParentName="InfectionBase">
+		<defName>BEWH_Hellshriek</defName>
+		<label>hellshriek</label>
+		<description>A terrible soul-shattering noise still affects this pawn</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<capMods>
+					<li>
+						<capacity>Hearing</capacity>
+						<postFactor>0</postFactor>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<postFactor>0.8</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-24</severityPerDay>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Symphony of Pain -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_SymphonyOfPain</defName>
+		<label>symphony of pain</label>
+		<description>Sound of a howling daemon orchestra</description>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VFECore.Shields.HediffCompProperties_DamageAura">
+				<compClass>VFECore.Shields.HediffComp_DamageAura</compClass>
+				<graphic Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+					<texPath>Effects/Slaanesh/SymphonyOfPain</texPath>
+					<drawSize>(14, 14)</drawSize>
+					<ticksPerFrame>4</ticksPerFrame>
+					<random>true</random>
+					<graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Animated</graphicClass>
+					<shaderType>TransparentPostLight</shaderType>
+				</graphic>
+				<damageDef>BEWH_SymphonyOfPain</damageDef>
+				<damageAmount>1</damageAmount>
+				<ticksBetween>90</ticksBetween>
+				<radius>6</radius>
+				<hostileOnly>false</hostileOnly>
+				<sustainer>BEWH_SymphonyOfPain</sustainer>
+				<soundEnded>BEWH_SymphonyOfPainEnd</soundEnded>
+			</li>
+		</comps>
+	</HediffDef>
+
+	<!-- Ecstatic Oblivion -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_EcstaticOblivion</defName>
+		<label>ecstatic oblivion</label>
+		<description>Unable to be stunned</description>
+		<isBad>false</isBad>
+	</HediffDef>
+
+</Defs>

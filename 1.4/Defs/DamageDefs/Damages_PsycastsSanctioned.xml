@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- SANCTIONED -->
+    <!-- Lightning -->
+
+    <DamageDef ParentName="StunBase">
+        <defName>BEWH_Lightning</defName>
+        <label>Lightning</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been struck to death by lightning.</deathMessage>
+        <hediff>BEWH_LightningInjury</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <impactSoundType>Electric</impactSoundType>
+        <defaultDamage>35</defaultDamage>
+        <defaultArmorPenetration>0.95</defaultArmorPenetration>
+        <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+        <explosionCellFleck>BlastEMP</explosionCellFleck>
+        <explosionColorEdge>(0.8, 0.8, 0.8, 0.8)</explosionColorEdge>
+        <explosionInteriorFleck>ElectricalSpark</explosionInteriorFleck>
+        <soundExplosion>Explosion_EMP</soundExplosion>
+        <combatLogRules>Damage_EMP</combatLogRules>
+    </DamageDef>
+
+    <!-- Bonebreak -->
+
+    <DamageDef>
+        <defName>BEWH_Bonebreak</defName>
+        <label>bone break</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <makesBlood>false</makesBlood>
+        <deathMessage>{0} has died from broken bones.</deathMessage>
+        <hediff>BEWH_Bonebreak</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <defaultDamage>15</defaultDamage>
+        <defaultArmorPenetration>5</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+
+</Defs>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Warhammer 40k - Psycasts</name>
+	<author>Phonicmas</author>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>Phonicmas.40kPsycasts</packageId>
+	<description>
+		Warhammer 40k - Psycasts module.
+	</description>
+	<modDependencies>
+		<li>
+			<packageId>Phonicmas.40kCore</packageId>
+			<displayName>Warhammer 40k - Core</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3025477432</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>VanillaExpanded.VPsycastsE</packageId>
+			<displayName>Vanilla Psycasts Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2842502659</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>brrainz.harmony</li>
+		<li>OskarPotocki.VanillaFactionsExpanded.Core</li>
+		<li>VanillaExpanded.VPsycastsE</li>
+		<li>Phonicmas.40kCore</li>
+		<li>Phonicmas.40kGenes</li>
+		<li>Phonicmas.40kFactions</li>
+	</loadAfter>
+</ModMetaData>

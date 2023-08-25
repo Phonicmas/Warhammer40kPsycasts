@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Warptime -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_Warptime</defName>
+		<label>warptime</label>
+		<description>Psychically induced agility reflexes, greatly increasing ranged hit, melee hit and melee dodge chance.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MeleeHitChance>1.6</MeleeHitChance>
+					<MeleeDodgeChance>1.4</MeleeDodgeChance>
+					<ShootingAccuracyPawn>1.6</ShootingAccuracyPawn>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Shattertime -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_Shattertime</defName>
+		<label>shattertime</label>
+		<description>Psychically induced hyper agility reflexes and linear time defiance, greatly reducing ranged cooldown, melee cooldown and increasing move speed.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statFactors>
+					<MoveSpeed>1.8</MoveSpeed>
+					<RangedCooldownFactor MayRequire="Ludeon.Rimworld.Biotech">0.6</RangedCooldownFactor>
+					<MeleeWeapon_CooldownMultiplier>0.6</MeleeWeapon_CooldownMultiplier>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- Storm of change skyfaller -->
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>BEWH_StormofChangeSkyfaller</defName>
+    <label>warp flame</label>
+    <size>(1, 1)</size>
+    <graphicData>
+      <texPath>Effects/ChaosShared/StormOfChange/StormofChange</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(10, 10)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <shadowSize>(1.75, 1.75)</shadowSize>
+      <explosionRadius>4</explosionRadius>
+      <explosionDamage>BEWH_ChangeStorm</explosionDamage>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+    </skyfaller>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- NURGLE -->
+    <!-- Corpse Burst -->
+
+    <DamageDef>
+        <defName>BEWH_CorpseBurst</defName>
+        <label>corpse rot</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been rotted to death.</deathMessage>
+        <hediff>BEWH_NurglesRot</hediff>
+        <hediffSkin>BEWH_Rot</hediffSkin>
+        <hediffSolid>BEWH_Rot</hediffSolid>
+        <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+        <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+        <soundExplosion>BEWH_NoSound</soundExplosion>
+        <defaultDamage>20</defaultDamage>
+        <defaultArmorPenetration>0.2</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Nurgle Wither -->
+
+    <DamageDef>
+        <defName>BEWH_NurgleWither</defName>
+        <label>nurgle wither</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been withered to death.</deathMessage>
+        <hediff>BEWH_NurgleWither</hediff>
+        <hediffSkin>BEWH_NurgleWither</hediffSkin>
+        <hediffSolid>BEWH_NurgleWither</hediffSolid>
+        <defaultDamage>0</defaultDamage>
+        <defaultArmorPenetration>10</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+    <!-- Cloud of flies -->
+
+    <DamageDef>
+        <defName>BEWH_CloudOfFlies</defName>
+        <label>cloud of flies</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been rotted to death.</deathMessage>
+        <hediff>BEWH_CloudOfFliesInjury</hediff>
+        <hediffSkin>BEWH_CloudOfFliesInjury</hediffSkin>
+        <hediffSolid>BEWH_CloudOfFliesInjury</hediffSolid>
+        <defaultDamage>1</defaultDamage>
+        <defaultArmorPenetration>0</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+  
+</Defs>

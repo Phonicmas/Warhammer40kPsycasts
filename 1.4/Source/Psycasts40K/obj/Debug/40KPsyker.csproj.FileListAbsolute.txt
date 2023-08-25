@@ -1,0 +1,4 @@
+C:\Steam\steamapps\common\RimWorld\Mods\40kPsykers\1.4\Source\Psyker\40KPsyker\obj\Debug\40KPsyker.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\40kPsykers\1.4\Source\Psyker\40KPsyker\obj\Debug\40KPsyker.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\40kPsykers\1.4\Assemblies\40KPsyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\40kPsykers\1.4\Source\Psyker\40KPsyker\obj\Debug\40KPsyker.dll

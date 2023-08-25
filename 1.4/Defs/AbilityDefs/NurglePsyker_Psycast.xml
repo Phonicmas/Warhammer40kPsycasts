@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Nurgle -->
+
+  <!-- Inviolable Flesh -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_InviolableFlesh_Nurgle</defName>
+    <label>inviolable flesh</label>
+    <description>The psyker's flesh twist and changes to resemble the blessed effluents of the
+      Plague God, becoming crusted with filth and foulness such that the blows of the enemy do no
+      cut so deep.</description>
+    <iconPath>Abilities/ChaosShared/InviolableFleshIcon</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>3600</durationTime>
+    <cooldownTime>7500</cooldownTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.07</psyfocusCost>
+        <entropyGain>23</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_InviolableFlesh</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Nurgle's Rot -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_NurglesRot_Nurgle</defName>
+    <label>nurgle's rot</label>
+    <description>The grandest and most infamous of Nurgle's contagions, nurgles rot has left
+      countless worlds desolated by this terrible daemonic pathogen.</description>
+    <iconPath>Abilities/ChaosShared/NurglesRotIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>100</castTime>
+    <castSound>BEWH_NoSound</castSound>
+    <durationTime>24000</durationTime>
+    <targetMode>Humanlike</targetMode>
+    <range>47.9</range>
+    <cooldownTime>5000</cooldownTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>2</level>
+        <order>3</order>
+        <psyfocusCost>0.12</psyfocusCost>
+        <entropyGain>107</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_InviolableFlesh_Nurgle</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_NurglesRot</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Rot Burst -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_RotBurst_Nurgle</defName>
+    <label>rot burst</label>
+    <description>The psyker draws from nurgles power to bombard every nearby enemy with rot, filth
+      and diseases.</description>
+    <iconPath>Abilities/ChaosShared/RotBurstIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Explode</abilityClass>
+    <castTime>40</castTime>
+    <range>30.9</range>
+    <radius>15.9</radius>
+    <targetMode>Self</targetMode>
+    <castSound>VPE_ConsumeBodies_Cast</castSound>
+    <castFleck>PsycastPsychicEffect</castFleck>
+    <cooldownTime>5000</cooldownTime>
+    <targetFlecks>
+      <li>BEWH_RotBustExplosion</li>
+    </targetFlecks>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>4</level>
+        <order>3</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>173</entropyGain>
+        <prerequisites>
+          <li>BEWH_NurglesRot_Nurgle</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>14.9</explosionRadius>
+        <onCaster>False</onCaster>
+        <explosionDamageDef>BEWH_CorpseBurst</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Leper's Curse -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_LepersCurse</defName>
+    <label>leper's curse</label>
+    <description>The psyker focuses a stream of decay into the target that cause severe bleeding.</description>
+    <iconPath>Abilities/Nurgle/LepersCurseIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+    <castTime>20</castTime>
+    <range>40.9</range>
+    <radius>1.9</radius>
+    <targetMode>Pawn</targetMode>
+    <castSound>BEWH_LepersCurse</castSound>
+    <cooldownTime>1200</cooldownTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>1</level>
+        <order>2</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>43</entropyGain>
+        <prerequisites>
+          <li>BEWH_InviolableFlesh_Nurgle</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+        <projectile>BEWH_LepersCurse</projectile>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Vile Contagion -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_VileContagion</defName>
+    <label>vile contagion</label>
+    <description>The psyker, lured in and empowered by the cries of suffering his corruption
+      inflicts, extends his consciousness through the miasma, spreading the disease along with it.</description>
+    <iconPath>Abilities/Nurgle/VileContagionIcon</iconPath>
+    <targetMode>Pawn</targetMode>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>12</castTime>
+    <durationTime>34000</durationTime>
+    <cooldownTime>7500</cooldownTime>
+    <fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+    <range>40.9</range>
+    <radius>10.9</radius>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.8</PsychicSensitivity>
+    </rangeStatFactors>
+    <radiusStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </radiusStatFactors>
+    <hasAoE>true</hasAoE>
+    <targetingParametersForAoE>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetMechs>false</canTargetMechs>
+      <canTargetBuildings>false</canTargetBuildings>
+      <mustBeSameFaction>false</mustBeSameFaction>
+      <ignoreRangeAndSight>true</ignoreRangeAndSight>
+    </targetingParametersForAoE>
+    <modExtensions>
+      <li Class="Psycasts40k.AbilityExtension_Psycast40k">
+        <path>BEWH_NurglePsyker</path>
+        <level>5</level>
+        <order>3</order>
+        <mustHaveHediff>BEWH_NurglesRot</mustHaveHediff>
+        <psyfocusCost>0.15</psyfocusCost>
+        <entropyGain>117</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_RotBurst_Nurgle</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_NurglesRot</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Cloud of Flies -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_CloudOfFlies</defName>
+    <label>cloud of flies</label>
+    <description>The psykers allows the Plague Father to infest him with flies, which emerges from
+      his skin, forming a shield around him, attacking anything that dares to apporach.</description>
+    <iconPath>Abilities/Nurgle/CloudOfFliesIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <range>1</range>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>4800</durationTime>
+    <castSound>BEWH_CloudOfFliesStart</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>55</entropyGain>
+        <prerequisites>
+          <li>BEWH_InviolableFlesh_Nurgle</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_CloudOfFlies</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Unnatural Regeneration -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_UnnaturalRegeneration</defName>
+    <label>unnatural regeneration</label>
+    <description>The psyker uses his intuitive knowledge of the body and psychic might to
+      unnaturally start regenerating lost limbs, suture lacerations, set and cement bones and stop
+      bleeding.</description>
+    <iconPath>Abilities/Nurgle/UnnaturalRegenerationIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>80</castTime>
+    <durationTime>60000</durationTime>
+    <cooldownTime>15000</cooldownTime>
+    <jobDef>VFEA_GotoTargetAndUseAbility</jobDef>
+    <requireLineOfSight>false</requireLineOfSight>
+    <targetMode>Pawn</targetMode>
+    <range>999999</range>
+    <distanceToTarget>1.5</distanceToTarget>
+    <castSound>VPE_RegrowLimbs_Cast</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>4</level>
+        <order>1</order>
+        <psyfocusCost>0.3</psyfocusCost>
+        <entropyGain>55</entropyGain>
+        <prerequisites>
+          <li>BEWH_CloudOfFlies</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_UnnaturalRegeneration</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Daemons of Nurgle -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonDaemonNurgle</defName>
+    <label>summon daemon of Nurgle</label>
+    <description>Summons a plaguebearer to help you.</description>
+    <iconPath>Abilities/Nurgle/SummonDaemonNurgle</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>120</castTime>
+    <range>30.9</range>
+    <durationTime>15000</durationTime>
+    <abilityClass>Psycasts40k.Ability_SpawnDaemon</abilityClass>
+    <cooldownTime>20000</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <power>1</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </powerStatFactors>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </rangeStatFactors>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_InviolableFlesh_Nurgle</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Greater Daemons of Nurgle - self explanitory - have longer cooldown -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonGreaterDaemonNurgle</defName>
+    <label>summon greater daemon of Nurgle (Not implemented)</label>
+    <description>Coming soon!</description>
+    <iconPath>NoTex</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>40</castTime>
+    <durationTime>46000</durationTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <cooldownTime>600</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_NurglePsyker</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_SummonDaemonNurgle</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+</Defs>

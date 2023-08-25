@@ -1,0 +1,4 @@
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kPsycasts\1.4\Assemblies\Psycasts40k.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kPsycasts\1.4\Source\Psycasts40K\obj\Debug\Psycasts40k.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kPsycasts\1.4\Source\Psycasts40K\obj\Debug\Psycasts40k.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kPsycasts\1.4\Source\Psycasts40K\obj\Debug\Psycasts40k.dll

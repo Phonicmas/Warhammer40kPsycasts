@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Warhammer 40k - Genes</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Space Marine Psyker Patch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Psycasts40k.PsykerPathDef[defName = "BEWH_Psyker"]</xpath>
+                    <value>
+                        <lockedReason>Missing Psyker Gene</lockedReason>
+                        <requiredGeneAny>
+                            <li>BEWH_Psyker</li>
+                            <li>BEWH_IotaPsyker</li>
+                            <li>BEWH_DeltaPsyker</li>
+                            <li>BEWH_BetaPsyker</li>
+                        </requiredGeneAny>
+                    </value>
+                </li>
+                <!-- Undivided Psyker Patch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Psycasts40k.PsykerPathDef[defName = "BEWH_ChaosPsyker"]</xpath>
+                    <value>
+                        <lockedReason>Missing Psyker Gene</lockedReason>
+                        <requiredGeneAny>
+                            <li>BEWH_Psyker</li>
+                            <li>BEWH_IotaPsyker</li>
+                            <li>BEWH_DeltaPsyker</li>
+                            <li>BEWH_BetaPsyker</li>
+                        </requiredGeneAny>
+                    </value>
+                </li>
+                <!-- Nurgle Psyker Patch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Psycasts40k.PsykerPathDef[defName = "BEWH_NurglePsyker"]</xpath>
+                    <value>
+                        <lockedReason>Missing Mark
+                            or Psyker Gene</lockedReason>
+                        <requiredGeneAny>
+                            <li>BEWH_Psyker</li>
+                            <li>BEWH_IotaPsyker</li>
+                            <li>BEWH_DeltaPsyker</li>
+                            <li>BEWH_BetaPsyker</li>
+                        </requiredGeneAny>
+                        <requiredGeneAll>
+                            <li>BEWH_NurgleMark</li>
+                        </requiredGeneAll>
+                    </value>
+                </li>
+                <!-- Slaanesh Psyker Patch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Psycasts40k.PsykerPathDef[defName = "BEWH_SlaaneshPsyker"]</xpath>
+                    <value>
+                        <lockedReason>Missing Mark
+                            or Psyker Gene</lockedReason>
+                        <requiredGeneAny>
+                            <li>BEWH_Psyker</li>
+                            <li>BEWH_IotaPsyker</li>
+                            <li>BEWH_DeltaPsyker</li>
+                            <li>BEWH_BetaPsyker</li>
+                        </requiredGeneAny>
+                        <requiredGeneAll>
+                            <li>BEWH_SlaaneshMark</li>
+                        </requiredGeneAll>
+                    </value>
+                </li>
+                <!-- Tzeentch Psyker Patch -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/Psycasts40k.PsykerPathDef[defName = "BEWH_TzeentchPsyker"]</xpath>
+                    <value>
+                        <lockedReason>Missing Mark
+                            or Psyker Gene</lockedReason>
+                        <requiredGeneAny>
+                            <li>BEWH_Psyker</li>
+                            <li>BEWH_IotaPsyker</li>
+                            <li>BEWH_DeltaPsyker</li>
+                            <li>BEWH_BetaPsyker</li>
+                        </requiredGeneAny>
+                        <requiredGeneAll>
+                            <li>BEWH_TzeentchMark</li>
+                        </requiredGeneAll>
+                    </value>
+                </li>
+
+                <!-- Remove abilities from marks -->
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName = "BEWH_NurgleMark"]/abilities</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName = "BEWH_TzeentchMark"]/abilities</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/GeneDef[defName = "BEWH_SlaaneshMark"]/abilities</xpath>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

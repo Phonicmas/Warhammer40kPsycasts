@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!-- LepersCurse -->
+
+    <SoundDef>
+        <defName>BEWH_Hellshriek</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Slaanesh/Hellshriek</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>42</volumeRange>
+                <distRange>20~50</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Symphony of Pain Sustainer -->
+
+    <SoundDef>
+        <defName>BEWH_SymphonyOfPain</defName>
+        <context>MapOnly</context>
+        <sustain>True</sustain>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Slaanesh/SymphonyOfPain</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>104</volumeRange>
+                <distRange>20~50</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Symphony of Pain Start -->
+
+    <SoundDef>
+        <defName>BEWH_SymphonyOfPainStart</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Slaanesh/SymphonyOfPainStart</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>42</volumeRange>
+                <distRange>20~50</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+    <!-- Symphony of Pain End -->
+
+    <SoundDef>
+        <defName>BEWH_SymphonyOfPainEnd</defName>
+        <context>MapOnly</context>
+        <maxSimultaneous>1</maxSimultaneous>
+        <priorityMode>PrioritizeNearest</priorityMode>
+        <subSounds>
+            <li>
+                <grains>
+                    <li Class="AudioGrain_Clip">
+                        <clipPath>Slaanesh/SymphonyOfPainEnd</clipPath>
+                    </li>
+                </grains>
+                <volumeRange>42</volumeRange>
+                <distRange>20~50</distRange>
+            </li>
+        </subSounds>
+    </SoundDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Assemblies\Psyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Source\Psyker\40KPsyker\obj\Debug\Psyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Mods\VanillaPsycastsExpanded\Assemblies\Psyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\BiotechExpansionWarhammer40k\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Mods\VanillaPsycastsExpanded\Assemblies\Psyker.dll
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.AssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\Warhammer40kGenesAndPsycasts\1.4\Mods\VanillaPsycastsExpanded\Source\Psyker\40KPsyker\obj\Debug\Psyker.dll

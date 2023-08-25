@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- UNDIVIDED -->
+    <!-- Doombolt -->
+
+    <DamageDef>
+        <defName>BEWH_Doom</defName>
+        <label>crush</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <deathMessage>{0} has been crushed to death.</deathMessage>
+        <hediff>Crush</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <armorCategory>Blunt</armorCategory>
+        <defaultDamage>20</defaultDamage>
+        <defaultArmorPenetration>0.7</defaultArmorPenetration>
+        <makesAnimalsFlee>true</makesAnimalsFlee>
+    </DamageDef>
+
+
+</Defs>

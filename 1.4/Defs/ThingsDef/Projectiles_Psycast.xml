@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- CHAOS PSYKER -->
+	<!-- Doombolt Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_Doombolt</defName>
+		<label>doombolt</label>
+		<description>A ball of psychic energy launched by a psyker</description>
+		<thingClass>VanillaPsycastsExpanded.Graphics.Projectile_Pointing</thingClass>
+		<graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+			<texPath>Effects/ChaosPsyker/Doombolt</texPath>
+			<ticksPerFrame>5</ticksPerFrame>
+			<graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Animated</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<damageDef>BEWH_Doom</damageDef>
+			<speed>45</speed>
+			<damageAmountBase>21</damageAmountBase>
+			<armorPenetrationBase>1.7</armorPenetrationBase>
+			<stoppingPower>1.5</stoppingPower>
+			<shadowSize>0.6</shadowSize>
+		</projectile>
+		<comps>
+			<li Class="VFECore.CompProperties_HomingProjectile">
+				<homingDistanceFractionPassed>0</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<initialDispersionFromTarget>0</initialDispersionFromTarget>
+				<hitSound>BEWH_NoSound</hitSound>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- TZEENTCH -->
+	<!-- Bolt of Change Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_BoltOfChange</defName>
+		<label>bolt of change</label>
+		<description>A ball of psychic energy launched by a psyker</description>
+		<thingClass>VanillaPsycastsExpanded.Graphics.Projectile_Pointing</thingClass>
+		<graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+			<texPath>Effects/ChaosShared/BoltOfChange</texPath>
+			<ticksPerFrame>5</ticksPerFrame>
+			<graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Animated</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<damageDef>BEWH_Change</damageDef>
+			<speed>45</speed>
+			<damageAmountBase>39</damageAmountBase>
+			<armorPenetrationBase>2.3</armorPenetrationBase>
+			<stoppingPower>1.5</stoppingPower>
+			<shadowSize>0.6</shadowSize>
+		</projectile>
+		<comps>
+			<li Class="VFECore.CompProperties_HomingProjectile">
+				<homingDistanceFractionPassed>0</homingDistanceFractionPassed>
+				<homingCorrectionTickRate>5</homingCorrectionTickRate>
+				<initialDispersionFromTarget>0</initialDispersionFromTarget>
+				<hitSound>BEWH_NoSound</hitSound>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- Flickering Flame of Tzeentch -->
+
+	<VFECore.ExpandableProjectileDef ParentName="BaseBullet">
+		<defName>BEWH_FlickeringFire</defName>
+		<label>flickering flame</label>
+		<thingClass>VFECore.FlamethrowProjectile</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/Proj_InfernoSpewer</texPath>
+			<texPathFadeOut>Things/Projectile/Proj_InfernoSpewerFadeOut</texPathFadeOut>
+			<shaderType>MoteGlow</shaderType>
+			<color>(163, 0, 142)</color>
+		</graphicData>
+		<projectile>
+			<damageDef>BEWH_WarpFlame</damageDef>
+			<speed>90</speed>
+			<damageAmountBase>6</damageAmountBase>
+		</projectile>
+		<drawOffscreen>true</drawOffscreen>
+		<lifeTimeDuration>50</lifeTimeDuration>
+		<widthScaleFactor>0.65</widthScaleFactor>
+		<heightScaleFactor>1</heightScaleFactor>
+		<startingPositionOffset>(0, 0, -1)</startingPositionOffset>
+		<totalSizeScale>1.4</totalSizeScale>
+		<tickFrameRate>2</tickFrameRate>
+		<finalTickFrameRate>5</finalTickFrameRate>
+		<tickDamageRate>20</tickDamageRate>
+		<dealsDamageOnce>false</dealsDamageOnce>
+		<minDistanceToAffect>2</minDistanceToAffect>
+	</VFECore.ExpandableProjectileDef>
+
+	<!-- SLAANESH -->
+	<!-- Lash of Slaanesh Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_LashOfSlaanesh</defName>
+		<label>lash of slaanesh</label>
+		<thingClass>VFECore.BeamProjectile</thingClass>
+		<drawOffscreen>true</drawOffscreen>
+		<graphicData>
+			<texPath>Effects/ChaosShared/LashOfSlaanesh/LashOfSlaanesh</texPath>
+			<shaderType>MoteGlow</shaderType>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(5, 1)</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>BEWH_Lash</damageDef>
+			<speed>10000</speed>
+			<damageAmountBase>73</damageAmountBase>
+			<armorPenetrationBase>0.27</armorPenetrationBase>
+			<stoppingPower>2</stoppingPower>
+			<shadowSize>0.4</shadowSize>
+		</projectile>
+	</ThingDef>
+
+	<!-- NURGLE PSYKER -->
+	<!-- Leper's Curse Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_LepersCurse</defName>
+		<label>leper's curse</label>
+		<description>The psyker focuses a stream of decay into the target.</description>
+		<thingClass>VFEMech.TeslaProjectile</thingClass>
+		<graphicData>
+			<texPath>Effects/Nurgle/LepersCurse</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(14, 14)</drawSize>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<damageDef>BEWH_NurgleWither</damageDef>
+			<speed>200</speed>
+			<extraDamages>
+				<li>
+					<def>BEWH_NurgleWither</def>
+					<amount>1</amount>
+				</li>
+			</extraDamages>
+		</projectile>
+		<modExtensions>
+			<li Class="VFEMech.TeslaChainingProps">
+				<maxBounceCount>0</maxBounceCount>
+				<damageDef>BEWH_NurgleWither</damageDef>
+				<targetFriendly>false</targetFriendly>
+				<bounceRange>0</bounceRange>
+				<maxLifetime>50</maxLifetime>
+				<impactSound>BEWH_NoSound</impactSound>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<!-- SANCTIONED PSYKER -->
+	<!-- Smite Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_Smite</defName>
+		<label>smite</label>
+		<description>Lightning launched by a psykers hand</description>
+		<thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
+		<graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+			<texPath>Effects/Psyker/Smite</texPath>
+			<graphicClass>Graphic_Flicker</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>EMP</damageDef>
+			<speed>200</speed>
+			<damageAmountBase>35</damageAmountBase>
+			<armorPenetrationBase>0.85</armorPenetrationBase>
+			<stoppingPower>1.5</stoppingPower>
+			<shadowSize>0</shadowSize>
+			<extraDamages>
+				<li>
+					<def>Flame</def>
+					<amount>20</amount>
+				</li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
+	<!-- Stonebane Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_Stonebane</defName>
+		<label>stonebane</label>
+		<description>???</description>
+		<thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
+		<graphicData>
+			<texPath>NoTex</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<explosionRadius>1.9</explosionRadius>
+			<damageDef>Thump</damageDef>
+			<speed>99999</speed>
+			<extraDamages>
+				<li>
+					<def>Flame</def>
+					<amount>99999</amount>
+				</li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
+	<!-- Bone breaker Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_Bonebreaker</defName>
+		<label>bone breaker</label>
+		<description>???</description>
+		<thingClass>VFECore.Abilities.AbilityProjectile</thingClass>
+		<graphicData>
+			<texPath>NoTex</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>(2, 2)</drawSize>
+		</graphicData>
+		<drawOffscreen>true</drawOffscreen>
+		<drawerType>RealtimeOnly</drawerType>
+		<projectile>
+			<damageDef>BEWH_Bonebreak</damageDef>
+			<speed>99999</speed>
+			<extraDamages>
+				<li>
+					<def>BEWH_Bonebreak</def>
+					<amount>15</amount>
+				</li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
+</Defs>

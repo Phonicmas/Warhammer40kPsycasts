@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Tzeentch -->
+
+  <!-- Mindscourge -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_Mindscourge_Tzeentch</defName>
+    <label>Mindscourge</label>
+    <description>The psyker, having placed a sliver of psychic energy in the victim's mind, will
+      inflict debilitating pain as in moves through the victim's psyche.</description>
+    <iconPath>Abilities/ChaosShared/MindscourgeIcon</iconPath>
+    <targetMode>Pawn</targetMode>
+    <targetingParameters>
+      <canTargetMechs>False</canTargetMechs>
+    </targetingParameters>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>15</castTime>
+    <durationTime>15000</durationTime>
+    <cooldownTime>1250</cooldownTime>
+    <fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+    <range>25.9</range>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.09</psyfocusCost>
+        <entropyGain>32</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_BoonOfTzeentch</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_Minscourge</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_ThoughtOnTarget">
+        <thoughtDef>BEWH_Mindscourge</thoughtDef>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Bolt of Change -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_BoltOfChange_Tzeentch</defName>
+    <label>bolt of change</label>
+    <description>The psyker focuses his will and his wrath into a searing bolt of warp-flame, that
+      mutates enemies, altering their genes.</description>
+    <iconPath>Abilities/ChaosShared/BoltOfChangeIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+    <castTime>20</castTime>
+    <range>50.9</range>
+    <radius>1.9</radius>
+    <power>1</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1.5</PsychicSensitivity>
+    </powerStatFactors>
+    <targetMode>Pawn</targetMode>
+    <castSound>BEWH_Doombolt</castSound>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </rangeStatFactors>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>4</level>
+        <order>1</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>45</entropyGain>
+        <prerequisites>
+          <li>BEWH_Mindscourge_Tzeentch</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+        <projectile>BEWH_BoltOfChange</projectile>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Storm of Change -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_StormOfChange_Tzeentch</defName>
+    <label>storm of change</label>
+    <description>The psyker focuses his will and his wrath into an arial warp-flame that descends
+      upon his enemies that mutates them, altering their genes.</description>
+    <iconPath>Abilities/ChaosShared/StormofChangeIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Skyfallers</abilityClass>
+    <castTime>40</castTime>
+    <range>30.9</range>
+    <radius>12.9</radius>
+    <power>2</power>
+    <cooldownTime>5000</cooldownTime>
+    <powerStatFactors>
+      <PsychicSensitivity>1.8</PsychicSensitivity>
+    </powerStatFactors>
+    <rangeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </rangeStatFactors>
+    <targetMode>Location</targetMode>
+    <castSound>VPE_Explosion</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>5</level>
+        <order>1</order>
+        <psyfocusCost>0.25</psyfocusCost>
+        <entropyGain>177</entropyGain>
+        <prerequisites>
+          <li>BEWH_BoltOfChange_Tzeentch</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Skyfaller">
+        <skyfaller>BEWH_StormofChangeSkyfaller</skyfaller>
+        <rocks>0</rocks>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Flickering Fire of Tzeentch -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_FlickeringFire</defName>
+    <label>flickering flame of Tzeentch</label>
+    <description>The psyker sends forth a spew of fire, engulfing the target, causing pain and
+      injuries.</description>
+    <iconPath>Abilities/Tzeentch/FlickeringFireIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+    <castTime>16</castTime>
+    <range>40.9</range>
+    <radius>1.9</radius>
+    <power>1</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1.2</PsychicSensitivity>
+    </powerStatFactors>
+    <targetMode>Pawn</targetMode>
+    <castSound>BEWH_NoSound</castSound>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.7</PsychicSensitivity>
+    </rangeStatFactors>
+    <cooldownTime>1250</cooldownTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0.09</psyfocusCost>
+        <entropyGain>57</entropyGain>
+        <prerequisites>
+          <li>BEWH_WarpFlameWard</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+        <projectile>BEWH_FlickeringFire</projectile>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Tzeentch Firestorm -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_TzeentchFirestorm</defName>
+    <label>tzeentch firestorm</label>
+    <description>The psyker summons into existence a giant firestorm in an instant, creating a large
+      explosion, burning everyone caught in it.</description>
+    <iconPath>Abilities/Tzeentch/FirestormIcon</iconPath>
+    <abilityClass>Psycasts40k.Ability_MultiExplode</abilityClass>
+    <range>30.9</range>
+    <radius>14.9</radius>
+    <hasAoE>true</hasAoE>
+    <targetMode>Location</targetMode>
+    <targetingParametersForAoE>
+      <canTargetPawns>true</canTargetPawns>
+      <canTargetHumans>true</canTargetHumans>
+      <canTargetAnimals>true</canTargetAnimals>
+      <canTargetMechs>true</canTargetMechs>
+      <canTargetSelf>false</canTargetSelf>
+      <canTargetBuildings>false</canTargetBuildings>
+      <mustBeSameFaction>false</mustBeSameFaction>
+    </targetingParametersForAoE>
+    <rangeStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </rangeStatFactors>
+    <targetFlecks>
+      <li>BEWH_FirestormExplosion</li>
+    </targetFlecks>
+    <castTime>15</castTime>
+    <durationTime>2400</durationTime>
+    <cooldownTime>10000</cooldownTime>
+    <castSound>VPE_Explosion</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.25</psyfocusCost>
+        <entropyGain>257</entropyGain>
+        <prerequisites>
+          <li>BEWH_FlickeringFire</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>2.9</explosionRadius>
+        <onCaster>False</onCaster>
+        <explosionDamageDef>BEWH_Firestorm</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <damageFalloff>false</damageFalloff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Boon of Tzeentch -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_BoonOfTzeentch</defName>
+    <label>boon of tzeentch</label>
+    <description>The psyker reaches deep into the warp for greater power, bolstering his already
+      potent abilities further.</description>
+    <iconPath>Abilities/Tzeentch/BoonOfTzeentchIcon</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>1800</durationTime>
+    <cooldownTime>7500</cooldownTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.15</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_BoonOfTzeentch</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Warp-Flame Ward -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_WarpFlameWard</defName>
+    <label>warp-flame ward</label>
+    <description>The psyker calls on the Changer of Ways to wrap his form in arcane energies.
+      Tendrils of these multihued flames orbits the psyker, eager to engulf those who dare attack
+      him.</description>
+    <iconPath>Abilities/Tzeentch/WardFlameWardIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <range>4.9</range>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>4800</durationTime>
+    <castSound>VPE_FireShield_Cast</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>36</entropyGain>
+        <prerequisites>
+          <li>BEWH_BoonOfTzeentch</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_WarpFlameWard</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Daemons of Tzeentch -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonDaemonTzeentch</defName>
+    <label>summon daemon of Tzeentch</label>
+    <description>Summons a pink horror to help you.</description>
+    <iconPath>Abilities/Tzeentch/SummonDaemonTzeentch</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>120</castTime>
+    <range>30.9</range>
+    <durationTime>15000</durationTime>
+    <abilityClass>Psycasts40k.Ability_SpawnDaemon</abilityClass>
+    <cooldownTime>20000</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <power>1</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </powerStatFactors>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </rangeStatFactors>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_BoonOfTzeentch</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Greater Daemons of Tzeentch - self explanitory - have longer cooldown -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonGreaterDaemonTzeentch</defName>
+    <label>summon greater daemon of Tzeentch (Not implemented)</label>
+    <description>Coming soon!</description>
+    <iconPath>NoTex</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>40</castTime>
+    <durationTime>46000</durationTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <cooldownTime>600</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_TzeentchPsyker</path>
+        <level>4</level>
+        <order>3</order>
+        <psyfocusCost>0</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_SummonDaemonTzeentch</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+</Defs>

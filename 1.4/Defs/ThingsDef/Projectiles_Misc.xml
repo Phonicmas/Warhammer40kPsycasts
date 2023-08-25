@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Pink Horror Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_PinkHorrorProjectile</defName>
+		<label>warp flame shot</label>
+		<graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+			<texPath>Effects/ChaosPsyker/Doombolt</texPath>
+			<ticksPerFrame>5</ticksPerFrame>
+			<graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Animated</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>BEWH_WarpFlame</damageDef>
+			<speed>50</speed>
+			<damageAmountBase>10</damageAmountBase>
+			<armorPenetrationBase>1.2</armorPenetrationBase>
+			<shadowSize>0.6</shadowSize>
+		</projectile>
+	</ThingDef>
+
+	<!-- Blue Horror Projectile -->
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>BEWH_BlueHorrorProjectile</defName>
+		<label>warp flame shot</label>
+		<graphicData Class="VanillaPsycastsExpanded.Graphics.GraphicData_Animated">
+			<texPath>Effects/ChaosPsyker/Doombolt</texPath>
+			<ticksPerFrame>5</ticksPerFrame>
+			<graphicClass>VanillaPsycastsExpanded.Graphics.Graphic_Animated</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+		</graphicData>
+		<projectile>
+			<damageDef>BEWH_WarpFlame</damageDef>
+			<speed>50</speed>
+			<damageAmountBase>6</damageAmountBase>
+			<armorPenetrationBase>1</armorPenetrationBase>
+			<shadowSize>0.6</shadowSize>
+		</projectile>
+	</ThingDef>
+
+</Defs>

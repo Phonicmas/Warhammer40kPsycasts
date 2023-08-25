@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Slaanesh -->
+
+  <!-- Acquiescence -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_Acquiescence_Slaanesh</defName>
+    <label>Acquiescence</label>
+    <description>The psyker conjures a spark of delusion, overwhelming the target's mind the
+      contradictory thoughts and feelings that drive him to distraction and eventually rendering him
+      unconsious. This lasts for a few seconds, scaling with psychic sensitivity, and make the
+      target pawn happy.</description>
+    <targetMode>Pawn</targetMode>
+    <iconPath>Abilities/ChaosShared/AcquiescenceIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>15</castTime>
+    <fleckOnTarget>PsycastPsychicEffect</fleckOnTarget>
+    <durationTime>7500</durationTime>
+    <range>20.9</range>
+    <cooldownTime>180</cooldownTime>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>1</level>
+        <order>1</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>26</entropyGain>
+        <psychic>true</psychic>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_Acquiescence</hediff>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_ThoughtOnTarget">
+        <thoughtDef>BEWH_Acquiescence</thoughtDef>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Lash of Slaanesh -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_LashOfSlaanesh_Slaanesh</defName>
+    <label>lash of slaanesh</label>
+    <description>The psyker draws upon slaanesh power to conjure her lash to inflict suffering.</description>
+    <iconPath>Abilities/ChaosShared/LashOfSlaaneshIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
+    <castTime>15</castTime>
+    <range>29.9</range>
+    <radius>2.9</radius>
+    <targetMode>Pawn</targetMode>
+    <castSound>VPE_EyeBlast_Cast</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>3</level>
+        <order>2</order>
+        <psyfocusCost>0.05</psyfocusCost>
+        <entropyGain>57</entropyGain>
+        <prerequisites>
+          <li>BEWH_CeleritousSense</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Projectile">
+        <projectile>BEWH_LashOfSlaanesh</projectile>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Lash of Submission -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_LashOfSubmission_Slaanesh</defName>
+    <label>lash of submission</label>
+    <description>The psyker projects a lurid, glowing cord of energy that wraps itself around his
+      enemies, worming itself into thier mind and overwhelming their will for some time granting
+      control over them.</description>
+    <iconPath>Abilities/ChaosShared/LashOfSubmissionIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castTime>40</castTime>
+    <castSound>VPE_MindControl_Cast</castSound>
+    <durationTime>2400</durationTime>
+    <cooldownTime>7500</cooldownTime>
+    <targetMode>Humanlike</targetMode>
+    <range>19.9</range>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>5</level>
+        <order>2</order>
+        <psyfocusCost>0.20</psyfocusCost>
+        <entropyGain>122</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_LashOfSlaanesh_Slaanesh</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_LashOfSubmission</hediff>
+        <durationMultiplier>PsychicSensitivity</durationMultiplier>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Hellshriek -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_Hellshriek</defName>
+    <label>hellshriek</label>
+    <description>The psyker reaches deep into the warp and produces a soul-shattering noise that
+      inflict terrible pain and temporary deafness upon those who hear it.</description>
+    <iconPath>Abilities/Slaanesh/HellshriekIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Explode</abilityClass>
+    <castTime>30</castTime>
+    <range>30.9</range>
+    <radius>30.9</radius>
+    <cooldownTime>2500</cooldownTime>
+    <targetMode>Self</targetMode>
+    <castSound>BEWH_Hellshriek</castSound>
+    <castFleck>PsycastPsychicEffect</castFleck>
+    <targetFlecks>
+      <li>BEWH_RotBustExplosion</li>
+    </targetFlecks>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>5</level>
+        <order>1</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>93</entropyGain>
+        <prerequisites>
+          <li>BEWH_EcstaticOblivion</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Explosion">
+        <explosionRadius>30.9</explosionRadius>
+        <onCaster>False</onCaster>
+        <explosionDamageDef>BEWH_Hellshriek</explosionDamageDef>
+        <casterImmune>true</casterImmune>
+        <damageFalloff>true</damageFalloff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Symphony of Pain -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SymphonyOfPain</defName>
+    <label>symphony of pain</label>
+    <description>The psyker casts his arms wide, as if conductinh a great orchestra of cavorting
+      daemons that howl around his echo in the Immaterium, stunning nearby pawns.</description>
+    <iconPath>Abilities/Slaanesh/SymphonyOfPainIcon</iconPath>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <range>1</range>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>1800</durationTime>
+    <cooldownTime>10000</cooldownTime>
+    <castSound>BEWH_SymphonyOfPainStart</castSound>
+    <showUndrafted>true</showUndrafted>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>2</level>
+        <order>1</order>
+        <psyfocusCost>0.2</psyfocusCost>
+        <entropyGain>194</entropyGain>
+        <prerequisites>
+          <li>BEWH_Acquiescence_Slaanesh</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_SymphonyOfPain</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Celeritous Sense -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_CeleritousSense</defName>
+    <label>celeritous sense</label>
+    <description>The psyker hones his sense, directing the flows of light and sound such that he can
+      take in every nuanced detail.</description>
+    <iconPath>Abilities/Slaanesh/CeleritousSenseIcon</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>15</castTime>
+    <durationTime>3600</durationTime>
+    <cooldownTime>7500</cooldownTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>2</level>
+        <order>3</order>
+        <psyfocusCost>0.15</psyfocusCost>
+        <entropyGain>25</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_Acquiescence_Slaanesh</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_CeleritousSense</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Ecstatic Oblivion -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_EcstaticOblivion</defName>
+    <label>ecstatic oblivion</label>
+    <description>The psyker summons up every flickering moment of stay emotion from within the
+      Immaterium, overwhelming his senses, making him unable to be stunned.</description>
+    <iconPath>Abilities/Slaanesh/EcstaticOblivionIcon</iconPath>
+    <targetMode>Self</targetMode>
+    <castTime>40</castTime>
+    <durationTime>4800</durationTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <cooldownTime>600</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>3</level>
+        <order>1</order>
+        <psyfocusCost>0.08</psyfocusCost>
+        <entropyGain>56</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_SymphonyOfPain</li>
+        </prerequisites>
+      </li>
+      <li Class="VFECore.Abilities.AbilityExtension_Hediff">
+        <hediff>BEWH_EcstaticOblivion</hediff>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Daemons of Slaanesh -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonDaemonSlaanesh</defName>
+    <label>summon daemon of Slaanesh</label>
+    <description>Summons a daemonette to help you.</description>
+    <iconPath>Abilities/Slaanesh/SummonDaemonSlaanesh</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>120</castTime>
+    <range>30.9</range>
+    <durationTime>15000</durationTime>
+    <abilityClass>Psycasts40k.Ability_SpawnDaemon</abilityClass>
+    <cooldownTime>20000</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <power>1</power>
+    <powerStatFactors>
+      <PsychicSensitivity>1</PsychicSensitivity>
+    </powerStatFactors>
+    <rangeStatFactors>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+    </rangeStatFactors>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>2</level>
+        <order>2</order>
+        <psyfocusCost>0.1</psyfocusCost>
+        <entropyGain>100</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_Acquiescence_Slaanesh</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+  <!-- Summon Greater Daemons of Slaanesh - self explanitory - have longer cooldown -->
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+    <defName>BEWH_SummonGreaterDaemonSlaanesh</defName>
+    <label>summon greater daemon of Slaanesh (Not implemented)</label>
+    <description>Coming soon!</description>
+    <iconPath>NoTex</iconPath>
+    <targetMode>Location</targetMode>
+    <castTime>40</castTime>
+    <durationTime>46000</durationTime>
+    <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
+    <cooldownTime>600</cooldownTime>
+    <castSound>BEWH_NoSound</castSound>
+    <modExtensions>
+      <li Class="VanillaPsycastsExpanded.AbilityExtension_Psycast">
+        <path>BEWH_SlaaneshPsyker</path>
+        <level>4</level>
+        <order>2</order>
+        <psyfocusCost>0</psyfocusCost>
+        <entropyGain>0</entropyGain>
+        <psychic>true</psychic>
+        <prerequisites>
+          <li>BEWH_SummonDaemonSlaanesh</li>
+        </prerequisites>
+      </li>
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+</Defs>

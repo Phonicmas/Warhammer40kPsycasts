@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <!-- Pink horror ranged attack -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name = "BEWH_PinkHorrorBase"]/verbs/li[label="ranged"]/defaultProjectile</xpath>
+                <value>
+                    <defaultProjectile>BEWH_PinkHorrorProjectile</defaultProjectile>
+                </value>
+            </li>
+            <!-- Blue horror ranged attack -->
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[@Name = "BEWH_BlueHorrorBase"]/verbs/li[label="ranged"]/defaultProjectile</xpath>
+                <value>
+                    <defaultProjectile>BEWH_BlueHorrorProjectile</defaultProjectile>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+</Patch>

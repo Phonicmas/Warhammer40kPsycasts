@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- Mindscourge -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_Minscourge</defName>
+		<label>Mindscourge</label>
+		<description>aaAAAAAAAAAHHHHHHHHhhhh.</description>
+		<stages>
+			<li>
+				<painOffset>0.666</painOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.35</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Boon of Tzeentch -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_BoonOfTzeentch</defName>
+		<label>boon of tzeentch</label>
+		<description>Potent power to bolster already formidable abilities.</description>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<statOffsets>
+					<PsychicSensitivity>1</PsychicSensitivity>
+					<MentalBreakThreshold>0.1</MentalBreakThreshold>
+				</statOffsets>
+				<statFactors>
+					<PsychicEntropyRecoveryRate>3</PsychicEntropyRecoveryRate>
+				</statFactors>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<!-- Warp-Flame Ward -->
+
+	<HediffDef ParentName="PsycastHediffBase">
+		<defName>BEWH_WarpFlameWard</defName>
+		<label>warp-flame ward</label>
+		<description>Ward that absorbs flames and warp-flames whilst warp-burning anyone who dares
+			attack.</description>
+		<initialSeverity>1</initialSeverity>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="VFECore.Shields.HediffCompProperties_Shield">
+				<compClass>VanillaPsycastsExpanded.Conflagrator.HediffComp_FireShield</compClass>
+				<graphic>
+					<texPath>Effects/Tzeentch/WarpFlameWard/WarpFlameWardBubble</texPath>
+					<drawSize>(2, 2)</drawSize>
+					<graphicClass>Graphic_Single</graphicClass>
+					<shaderType>TransparentPostLight</shaderType>
+				</graphic>
+				<absorbAttackType>Melee</absorbAttackType>
+				<absorb>
+					<li>Flame</li>
+					<li>BEWH_WarpFlame</li>
+					<li>BEWH_ChangeStorm</li>
+					<li>BEWH_Change</li>
+				</absorb>
+				<sustainer>VPE_FireShield_Sustainer</sustainer>
+				<soundEnded>VPE_FireShield_End</soundEnded>
+				<doDust>false</doDust>
+				<absorbedFleck>ExplosionFlash</absorbedFleck>
+				<damageOnAttack>Melee</damageOnAttack>
+				<damageType>BEWH_WarpFlame</damageType>
+				<damageAmount>8</damageAmount>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<statFactors>
+					<Flammability>0</Flammability>
+				</statFactors>
+				<statOffsets>
+					<ComfyTemperatureMax>1000</ComfyTemperatureMax>
+				</statOffsets>
+			</li>
+		</stages>
+	</HediffDef>
+
+</Defs>
