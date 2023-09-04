@@ -21,13 +21,12 @@ namespace Psycasts40k
                     }
                     return false;
                 }
-                HediffDef nurglesRot = mustHaveHediff;
-                Log.Message("" + nurglesRot);
-                if (pawn != null && !pawn.health.hediffSet.HasHediff(nurglesRot))
+
+                if (pawn != null && !pawn.health.hediffSet.HasHediff(mustHaveHediff))
                 {
                     if (throwMessages)
                     {
-                        Messages.Message("Doesn't have nurgles rot".Translate(), MessageTypeDefOf.RejectInput, historical: false);
+                        Messages.Message("NoNurgleRot".Translate(), MessageTypeDefOf.RejectInput, historical: false);
                     }
                     return false;
                 }

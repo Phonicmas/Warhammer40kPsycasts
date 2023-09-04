@@ -14,6 +14,7 @@
         <modExtensions>
             <li Class="VanillaGenesExpanded.GeneExtension">
                 <backgroundPathXenogenes>UI/Icons/Genes/GeneBackground_Mutation</backgroundPathXenogenes>
+                <hideGene>true</hideGene>
             </li>
         </modExtensions>
     </GeneDef>

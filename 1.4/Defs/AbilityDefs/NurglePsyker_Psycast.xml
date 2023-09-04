@@ -288,6 +288,11 @@
           <li>BEWH_InviolableFlesh_Nurgle</li>
         </prerequisites>
       </li>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPlaguebearer</li>
+        </daemonToSummon>
+      </li>
     </modExtensions>
   </VFECore.Abilities.AbilityDef>
 

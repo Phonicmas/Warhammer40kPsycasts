@@ -273,6 +273,11 @@
           <li>BEWH_Acquiescence_Slaanesh</li>
         </prerequisites>
       </li>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedDaemonette</li>
+        </daemonToSummon>
+      </li>
     </modExtensions>
   </VFECore.Abilities.AbilityDef>
 

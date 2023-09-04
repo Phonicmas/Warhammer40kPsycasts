@@ -308,6 +308,11 @@
           <li>BEWH_BoonOfTzeentch</li>
         </prerequisites>
       </li>
+      <li Class="Core40k.DefModExtension_DaemonSummon">
+        <daemonToSummon>
+          <li>BEWH_SummonedPinkHorror</li>
+        </daemonToSummon>
+      </li>
     </modExtensions>
   </VFECore.Abilities.AbilityDef>
 

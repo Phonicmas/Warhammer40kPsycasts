@@ -1,6 +1,7 @@
 ﻿using RimWorld.Planet;
 using UnityEngine;
 using Verse;
+using Core40k;
 
 namespace Psycasts40k
 {
@@ -8,45 +9,23 @@ namespace Psycasts40k
     {
         public override void Cast(params GlobalTargetInfo[] targets)
         {
+            if (!def.HasModExtension<DefModExtension_DaemonSummon>())
+            {
+                return;
+            }
             base.Cast(targets);
             foreach (GlobalTargetInfo globalTargetInfo in targets)
             {
                 IntVec3 position = globalTargetInfo.Cell;
-                PawnKindDef summon;
-
-                if (def.defName == null)
-                {
-                    return;
-                }
-
-                switch (def.defName)
-                {
-                    case "BEWH_SummonDaemonTzeentch":
-                        summon = Psycasts40kDefOf.BEWH_SummonedPinkHorror;
-                        break;
-                    case "BEWH_SummonDaemonNurgle":
-                        summon = Psycasts40kDefOf.BEWH_SummonedPlaguebearer;
-                        break;
-                    case "BEWH_SummonDaemonSlaanesh":
-                        summon = Psycasts40kDefOf.BEWH_SummonedDaemonette;
-                        break;
-                    default:
-                        Log.Error("Failed to find defName for psyker power (summon)");
-                        return;
-                }
+                PawnKindDef summon = def.GetModExtension<DefModExtension_DaemonSummon>().daemonToSummon;
 
                 int summonAmount = Mathf.FloorToInt(GetPowerForPawn());
-                if (summonAmount == 0)
+
+                for (int i = 0; i < summonAmount; i++)
                 {
                     GenSpawn.Spawn(PawnGenerator.GeneratePawn(summon, pawn.Faction), position, pawn.Map);
                 }
-                else
-                {
-                    for (int i = 0; i < summonAmount; i++)
-                    {
-                        GenSpawn.Spawn(PawnGenerator.GeneratePawn(summon, pawn.Faction), position, pawn.Map);
-                    }
-                }
+
             }
         }
     }
