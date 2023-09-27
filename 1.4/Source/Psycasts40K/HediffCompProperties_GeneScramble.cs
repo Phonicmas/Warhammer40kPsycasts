@@ -3,14 +3,12 @@
 
 namespace Psycasts40k
 {
-    public class HediffCompProperties_GeneScramble : HediffCompProperties
+    public class HediffCompProperties_AddMutation : HediffCompProperties
     {
 
-        public int scrambleAmount;
-
-        public HediffCompProperties_GeneScramble()
+        public HediffCompProperties_AddMutation()
         {
-            compClass = typeof(HediffComp_GeneScramble);
+            compClass = typeof(HediffComp_AddMutation);
         }
 
     }

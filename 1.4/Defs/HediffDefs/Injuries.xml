@@ -242,9 +242,7 @@
     <HediffDef ParentName="BEWH_Mutate">
         <defName>BEWH_BoltChange</defName>
         <comps>
-            <li Class="Psycasts40k.HediffCompProperties_GeneScramble">
-                <scrambleAmount>5</scrambleAmount>
-            </li>
+            <li Class="Psycasts40k.HediffCompProperties_AddMutation" />
         </comps>
     </HediffDef>
 
@@ -253,9 +251,7 @@
     <HediffDef ParentName="BEWH_Mutate">
         <defName>BEWH_StormChange</defName>
         <comps>
-            <li Class="Psycasts40k.HediffCompProperties_GeneScramble">
-                <scrambleAmount>3</scrambleAmount>
-            </li>
+            <li Class="Psycasts40k.HediffCompProperties_AddMutation" />
         </comps>
     </HediffDef>
 

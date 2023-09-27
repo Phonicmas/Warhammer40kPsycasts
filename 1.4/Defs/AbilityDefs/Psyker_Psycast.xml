@@ -6,8 +6,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Smite</defName>
     <label>smite</label>
-    <description>The psyker shoots bolts of lightning from his finger-tips, rending his foes with
-      psychic energy.</description>
+    <description>The psyker shoots bolts of lightning from his finger-tips, rending his foes with psychic energy.</description>
     <iconPath>Abilities/Psyker/SmiteIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
     <castTime>30</castTime>
@@ -37,8 +36,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_MightOfHeroes</defName>
     <label>might of heroes</label>
-    <description>The psyker calls upon the power of the Warp to heighten the speed and strength of
-      himself to unimaginable levels.</description>
+    <description>The psyker calls upon the power of the Warp to heighten the speed and strength of himself to unimaginable levels.</description>
     <iconPath>Abilities/Psyker/MightOfHeroesIcon</iconPath>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -70,8 +68,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_MachineCurse</defName>
     <label>machine curse</label>
-    <description>The psyker curses a target mech's machine spirit to cause malfunctions, severely
-      reducing it's capabilities.</description>
+    <description>The psyker curses a target mech's machine spirit to cause malfunctions, severely reducing it's capabilities.</description>
     <targetMode>Pawn</targetMode>
     <targetingParametersList>
       <li>
@@ -109,8 +106,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_GateOfInfinity</defName>
     <label>gate of infinity</label>
-    <description>The psyker is able to create a safe passageway through the Warp, allowing him to
-      teleport to any location on the battlefield.</description>
+    <description>The psyker is able to create a safe passageway through the Warp, allowing him to teleport to any location on the battlefield.</description>
     <iconPath>Abilities/Psyker/GateOfInfinityIcon</iconPath>
     <abilityClass>VanillaPsycastsExpanded.Skipmaster.Ability_Teleport</abilityClass>
     <targetCount>2</targetCount>
@@ -193,8 +189,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_ForceBarrier</defName>
     <label>force barrier</label>
-    <description>The psyker creates a shimmering psychic shield that protects him and his allies
-      from enemy attack.</description>
+    <description>The psyker creates a shimmering psychic shield that protects him and his allies from enemy attack.</description>
     <iconPath>Abilities/Psyker/ForceBarrierIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <targetMode>Self</targetMode>
@@ -242,9 +237,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Stonebane</defName>
     <label>stonebane</label>
-    <description>The Psyker channels the will of Dorn into an attack so terrible that no wall or
-      fortification will be left standing, dealing massive damage instantly destroying all but the
-      toughes buildings.</description>
+    <description>The Psyker channels the will of Dorn into an attack so terrible that no wall or fortification will be left standing, dealing massive damage instantly destroying all but the toughes buildings.</description>
     <iconPath>Abilities/Psyker/StonebaneIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_ShootProjectile</abilityClass>
     <castTime>20</castTime>
@@ -277,8 +270,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Scourging</defName>
     <label>scourging</label>
-    <description>The psyker splits the air apart as bright arcs of soul-lightning destroys anything
-      in its path.</description>
+    <description>The psyker splits the air apart as bright arcs of soul-lightning destroys anything in its path.</description>
     <iconPath>Abilities/Psyker/ScourgingIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Explode</abilityClass>
     <range>40.9</range>
@@ -319,8 +311,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_BoneBreaker</defName>
     <label>bone breaker</label>
-    <description>The psyker focuses his might and will into the blows he rains down on his enemies
-      pulping flesh and breaking bones.</description>
+    <description>The psyker focuses his might and will into the blows he rains down on his enemies pulping flesh and breaking bones.</description>
     <iconPath>Abilities/Psyker/BoneBreakerIcon</iconPath>
     <targetMode>Pawn</targetMode>
     <range>35.9</range>
@@ -355,8 +346,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Shrouding</defName>
     <label>shrouding</label>
-    <description>The Psyker clouds the minds of his foes by creating a ghostly shadow only they can
-      see, causing their aim to sway true.</description>
+    <description>The Psyker clouds the minds of his foes by creating a ghostly shadow only they can see, causing their aim to sway true.</description>
     <iconPath>Abilities/Psyker/ShroudingIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <castTime>300</castTime>
@@ -402,8 +392,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Nightshroud</defName>
     <label>nightshroud</label>
-    <description>The psyker reaches into his enemies' minds, obscuring himself and his companions
-      from their sight. However this invisibility is broken upon attacking.</description>
+    <description>The psyker reaches into his enemies' minds, obscuring himself and his companions from their sight. However this invisibility is broken upon attacking.</description>
     <iconPath>Abilities/Psyker/NightshroudIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <castTime>300</castTime>
@@ -441,8 +430,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_NullZone</defName>
     <label>null zone</label>
-    <description>This power removes the mystical properties of any enemy within range, making their
-      psychic abilities nearly useless.</description>
+    <description>This power removes the mystical properties of any enemy within range, making their psychic abilities nearly useless.</description>
     <iconPath>Abilities/Psyker/NullZoneIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <castTime>300</castTime>

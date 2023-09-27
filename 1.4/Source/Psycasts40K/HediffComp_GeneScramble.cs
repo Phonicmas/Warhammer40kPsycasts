@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core40k;
+using System;
 using System.Collections.Generic;
 using Verse;
 
@@ -6,88 +7,81 @@ using Verse;
 namespace Psycasts40k
 {
 
-    public class HediffComp_GeneScramble : HediffComp
+    public class HediffComp_AddMutation : HediffComp
     {
 
-        //All mutation genes
-        static List<GeneDef> mutations = new List<GeneDef> {
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation1"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation2"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation3"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation4"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation5"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation6"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation7"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation8"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation9"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation10"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation11"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation12"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation13"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation14"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation15"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation16"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation17"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation18"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation19"),
-            DefDatabase<GeneDef>.GetNamed("BEWH_Mutation20")};
+        //All mutation hediffs
+        static List<HediffDef> mutations = new List<HediffDef> {
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationAdditionalEye"),
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationExtraLeg"),
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationExtraArm"),
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationTentacleReplacement"),
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationRottingFlesh"),
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationTentacleRandom")};
 
-        public HediffCompProperties_GeneScramble Props => (HediffCompProperties_GeneScramble)props;
+        public HediffCompProperties_AddMutation Props => (HediffCompProperties_AddMutation)props;
 
         public override void CompPostMake()
         {
             Pawn pawn = base.Pawn;
 
-            if (pawn.DestroyedOrNull() || pawn.genes == null || pawn.Dead)
+            if (pawn == null || pawn.DestroyedOrNull() || pawn.genes == null || pawn.Dead)
             {
                 return;
             }
 
             var rand = new Random();
 
-            int scrambleAmount;
+            List<HediffDef> mutationsThatCanBeAdded = mutations;
 
-            List<Gene> xenogenes = new List<Gene>(pawn.genes.Xenogenes);
+            HediffDef hediffToAdd = mutationsThatCanBeAdded[rand.Next(0, mutationsThatCanBeAdded.Count)];
+            List<BodyPartDef> canApplyTo;
 
-            List<GeneDef> mutationsThatCanBeAdded = mutations;
-
-            //Finds mutations that can be added
-            foreach (var gene in xenogenes)
+            if (!hediffToAdd.HasModExtension<DefModExtension_Mutations>())
             {
-                if (mutations.Contains(gene.def))
-                {
-                    mutationsThatCanBeAdded.Remove(gene.def);
-                }
-            }
-
-            //Checking if there are fewer mutations left than scrambles to add
-            if (Props.scrambleAmount > mutationsThatCanBeAdded.Count)
-            {
-                scrambleAmount = mutationsThatCanBeAdded.Count;
+                canApplyTo = null;
             }
             else
             {
-                scrambleAmount = Props.scrambleAmount;
+                canApplyTo = hediffToAdd.GetModExtension<DefModExtension_Mutations>().canApplyToPart;
             }
 
-            List<int> randomList = new List<int>();
+            List<BodyPartRecord> record = new List<BodyPartRecord>();
 
-            int num;
-
-            //Finding mutations to add
-            while (randomList.Count < scrambleAmount)
+            if (canApplyTo == null)
             {
-                num = rand.Next(0, mutationsThatCanBeAdded.Count);
-                if (!randomList.Contains(num))
+                pawn.health.AddHediff(hediffToAdd, null);
+            }
+            else
+            {
+                int j = 0;
+                //Makes list of bodyparts records for adding the hediff
+                while (j < canApplyTo.Count)
                 {
-                    randomList.Add(num);
+                    BodyPartDef part = canApplyTo[j];
+                    List<BodyPartRecord> bpList = pawn.RaceProps.body.AllParts;
+                    for (int k = 0; k < bpList.Count; k++)
+                    {
+                        BodyPartRecord bodyPartRecord = bpList[k];
+                        if (bodyPartRecord.def == part)
+                        {
+                            record.Add(bodyPartRecord);
+                        }
+                    }
+                    j += 1;
                 }
-            }
 
-            //Adds genes
-            for (int i = 0; i < scrambleAmount; i++)
-            {
-                pawn.genes.AddGene(mutations[randomList[i]], true);
+                if (hediffToAdd.GetModExtension<DefModExtension_Mutations>().applyToAllParts)
+                {
+                    for (int i = 0; i < record.Count; i++)
+                    {
+                        pawn.health.AddHediff(hediffToAdd, record[i]);
+                    }
+                }
+                else
+                {
+                    pawn.health.AddHediff(hediffToAdd, record[rand.Next(0, record.Count)]);
+                }
             }
 
         }

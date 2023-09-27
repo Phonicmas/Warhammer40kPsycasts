@@ -8,10 +8,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Acquiescence_Slaanesh</defName>
     <label>Acquiescence</label>
-    <description>The psyker conjures a spark of delusion, overwhelming the target's mind the
-      contradictory thoughts and feelings that drive him to distraction and eventually rendering him
-      unconsious. This lasts for a few seconds, scaling with psychic sensitivity, and make the
-      target pawn happy.</description>
+    <description>The psyker conjures a spark of delusion, overwhelming the target's mind the contradictory thoughts and feelings that drive him to distraction and eventually rendering him unconsious. This lasts for a few seconds, scaling with psychic sensitivity, and make the target pawn happy.</description>
     <targetMode>Pawn</targetMode>
     <iconPath>Abilities/ChaosShared/AcquiescenceIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
@@ -73,9 +70,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_LashOfSubmission_Slaanesh</defName>
     <label>lash of submission</label>
-    <description>The psyker projects a lurid, glowing cord of energy that wraps itself around his
-      enemies, worming itself into thier mind and overwhelming their will for some time granting
-      control over them.</description>
+    <description>The psyker projects a lurid, glowing cord of energy that wraps itself around his enemies, worming itself into thier mind and overwhelming their will for some time granting control over them.</description>
     <iconPath>Abilities/ChaosShared/LashOfSubmissionIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <castTime>40</castTime>
@@ -108,8 +103,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_Hellshriek</defName>
     <label>hellshriek</label>
-    <description>The psyker reaches deep into the warp and produces a soul-shattering noise that
-      inflict terrible pain and temporary deafness upon those who hear it.</description>
+    <description>The psyker reaches deep into the warp and produces a soul-shattering noise that inflict terrible pain and temporary deafness upon those who hear it.</description>
     <iconPath>Abilities/Slaanesh/HellshriekIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Explode</abilityClass>
     <castTime>30</castTime>
@@ -148,8 +142,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_SymphonyOfPain</defName>
     <label>symphony of pain</label>
-    <description>The psyker casts his arms wide, as if conductinh a great orchestra of cavorting
-      daemons that howl around his echo in the Immaterium, stunning nearby pawns.</description>
+    <description>The psyker casts his arms wide, as if conductinh a great orchestra of cavorting daemons that howl around his echo in the Immaterium, stunning nearby pawns.</description>
     <iconPath>Abilities/Slaanesh/SymphonyOfPainIcon</iconPath>
     <abilityClass>VFECore.Abilities.Ability_Blank</abilityClass>
     <range>1</range>
@@ -181,8 +174,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_CeleritousSense</defName>
     <label>celeritous sense</label>
-    <description>The psyker hones his sense, directing the flows of light and sound such that he can
-      take in every nuanced detail.</description>
+    <description>The psyker hones his sense, directing the flows of light and sound such that he can take in every nuanced detail.</description>
     <iconPath>Abilities/Slaanesh/CeleritousSenseIcon</iconPath>
     <targetMode>Self</targetMode>
     <castTime>15</castTime>
@@ -213,8 +205,7 @@
   <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
     <defName>BEWH_EcstaticOblivion</defName>
     <label>ecstatic oblivion</label>
-    <description>The psyker summons up every flickering moment of stay emotion from within the
-      Immaterium, overwhelming his senses, making him unable to be stunned.</description>
+    <description>The psyker summons up every flickering moment of stay emotion from within the Immaterium, overwhelming his senses, making him unable to be stunned.</description>
     <iconPath>Abilities/Slaanesh/EcstaticOblivionIcon</iconPath>
     <targetMode>Self</targetMode>
     <castTime>40</castTime>

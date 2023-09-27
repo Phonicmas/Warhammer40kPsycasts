@@ -13,6 +13,7 @@
         <deathMessage>{0} has been mutated to death.</deathMessage>
         <hediff>BEWH_BoltChange</hediff>
         <hediffSolid>Crack</hediffSolid>
+        <soundExplosion>BEWH_NoSound</soundExplosion>
         <defaultDamage>38</defaultDamage>
         <defaultArmorPenetration>2.7</defaultArmorPenetration>
         <makesAnimalsFlee>true</makesAnimalsFlee>
