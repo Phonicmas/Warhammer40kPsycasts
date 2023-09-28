@@ -5,7 +5,7 @@
 
   <!-- Doombolt -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Doombolt</defName>
     <label>doombolt</label>
     <description>A bolt made of raw chaos energy are launched by the psyker against his enemies. Made from dark energy of the coalesced spite and loathing of the psyker.</description>
@@ -38,7 +38,7 @@
 
   <!-- Warptime -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Warptime</defName>
     <label>warptime</label>
     <description>The timeless nature of the warp grants the psyker the mean to defy the normal limits of time, hastening his reflexes for ana mount of time depending on his psychic sensitivity.</description>
@@ -70,7 +70,7 @@
 
   <!-- Shattertime -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Shattertime</defName>
     <label>shattertime</label>
     <description>The psyker draws upon the timeless nature of the warp and uses it to unravel the hinderence of linear time, allowing him to appear at different times in time.</description>
@@ -105,7 +105,7 @@
 
   <!-- Mindscourge -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Mindscourge</defName>
     <label>Mindscourge</label>
     <description>The psyker, having placed a sliver of psychic energy in the victim's mind, will inflict debilitating pain as in moves through the victim's psyche.</description>
@@ -143,7 +143,7 @@
 
   <!-- Bolt of Change -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_BoltOfChange</defName>
     <label>bolt of change</label>
     <description>The psyker focuses his will and his wrath into a searing bolt of warp-flame, that mutates enemies, altering their genes.</description>
@@ -180,7 +180,7 @@
 
   <!-- Storm of Change -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_StormOfChange</defName>
     <label>storm of change</label>
     <description>The psyker focuses his will and his wrath into an arial warp-flame that descends upon his enemies that mutates them, altering their genes.</description>
@@ -221,7 +221,7 @@
 
   <!-- Acquiescence -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Acquiescence</defName>
     <label>Acquiescence</label>
     <description>The psyker conjures a spark of delusion, overwhelming the target's mind the contradictory thoughts and feelings that drive him to distraction and eventually rendering him unconsious. This lasts for a few seconds, scaling with psychic sensitivity, and make the target pawn happy.</description>
@@ -256,7 +256,7 @@
 
   <!-- Lash of Slaanesh -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_LashOfSlaanesh</defName>
     <label>lash of slaanesh</label>
     <description>The psyker draws upon slaanesh power to conjure her lash to inflict suffering.</description>
@@ -286,7 +286,7 @@
 
   <!-- Lash of Submission -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_LashOfSubmission</defName>
     <label>lash of submission</label>
     <description>The psyker projects a lurid, glowing cord of energy that wraps itself around his enemies, worming itself into thier mind and overwhelming their will for some time granting control over them.</description>
@@ -322,7 +322,7 @@
 
   <!-- Inviolable Flesh -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_InviolableFlesh</defName>
     <label>inviolable flesh</label>
     <description>The psyker's flesh twist and changes to resemble the blessed effluents of the Plague God, becoming crusted with filth and foulness such that the blows of the enemy do no cut so deep.</description>
@@ -354,7 +354,7 @@
 
   <!-- Nurgle's Rot -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_NurglesRot</defName>
     <label>nurgle's rot</label>
     <description>The grandest and most infamous of Nurgle's contagions, nurgles rot has left countless worlds desolated by this terrible daemonic pathogen.</description>
@@ -387,7 +387,7 @@
 
   <!-- Rot Burst -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_RotBurst</defName>
     <label>rot burst</label>
     <description>The psyker draws from nurgles power to bombard every nearby enemy with rot, filth and diseases.</description>

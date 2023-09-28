@@ -5,7 +5,7 @@
 
   <!-- Inviolable Flesh -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_InviolableFlesh_Nurgle</defName>
     <label>inviolable flesh</label>
     <description>The psyker's flesh twist and changes to resemble the blessed effluents of the Plague God, becoming crusted with filth and foulness such that the blows of the enemy do no cut so deep.</description>
@@ -34,7 +34,7 @@
 
   <!-- Nurgle's Rot -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_NurglesRot_Nurgle</defName>
     <label>nurgle's rot</label>
     <description>The grandest and most infamous of Nurgle's contagions, nurgles rot has left countless worlds desolated by this terrible daemonic pathogen.</description>
@@ -67,7 +67,7 @@
 
   <!-- Rot Burst -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_RotBurst_Nurgle</defName>
     <label>rot burst</label>
     <description>The psyker draws from nurgles power to bombard every nearby enemy with rot, filth and diseases.</description>
@@ -105,7 +105,7 @@
 
   <!-- Leper's Curse -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_LepersCurse</defName>
     <label>leper's curse</label>
     <description>The psyker focuses a stream of decay into the target that cause severe bleeding.</description>
@@ -136,7 +136,7 @@
 
   <!-- Vile Contagion -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_VileContagion</defName>
     <label>vile contagion</label>
     <description>The psyker, lured in and empowered by the cries of suffering his corruption inflicts, extends his consciousness through the miasma, spreading the disease along with it.</description>
@@ -184,7 +184,7 @@
 
   <!-- Cloud of Flies -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_CloudOfFlies</defName>
     <label>cloud of flies</label>
     <description>The psykers allows the Plague Father to infest him with flies, which emerges from his skin, forming a shield around him, attacking anything that dares to apporach.</description>
@@ -215,7 +215,7 @@
 
   <!-- Unnatural Regeneration -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_UnnaturalRegeneration</defName>
     <label>unnatural regeneration</label>
     <description>The psyker uses his intuitive knowledge of the body and psychic might to unnaturally start regenerating lost limbs, suture lacerations, set and cement bones and stop bleeding.</description>
@@ -249,7 +249,7 @@
 
   <!-- Summon Daemons of Nurgle -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_SummonDaemonNurgle</defName>
     <label>summon daemon of Nurgle</label>
     <description>Summons a plaguebearer to help you.</description>
@@ -290,7 +290,7 @@
 
   <!-- Summon Greater Daemons of Nurgle - self explanitory - have longer cooldown -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_SummonGreaterDaemonNurgle</defName>
     <label>summon greater daemon of Nurgle (Not implemented)</label>
     <description>Coming soon!</description>

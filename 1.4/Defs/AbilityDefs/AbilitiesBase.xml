@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!-- Bases -->
+  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase" Name="BEWH_ExcludePsytrainerBase" Abstract="True">
+    <modExtensions>
+      <li Class="Psycasts40k.DefModExtension_ExcludePsytrainer" />
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+
+
+  <VFECore.Abilities.AbilityDef ParentName="VPE_WordOfAbilityBase" Name="BEWH_ExcludePsytrainerWordOfBase" Abstract="True">
+    <modExtensions>
+      <li Class="Psycasts40k.DefModExtension_ExcludePsytrainer" />
+    </modExtensions>
+  </VFECore.Abilities.AbilityDef>
+
+</Defs>

@@ -5,7 +5,7 @@
 
   <!-- Mindscourge -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_Mindscourge_Tzeentch</defName>
     <label>Mindscourge</label>
     <description>The psyker, having placed a sliver of psychic energy in the victim's mind, will inflict debilitating pain as in moves through the victim's psyche.</description>
@@ -44,7 +44,7 @@
 
   <!-- Bolt of Change -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_BoltOfChange_Tzeentch</defName>
     <label>bolt of change</label>
     <description>The psyker focuses his will and his wrath into a searing bolt of warp-flame, that mutates enemies, altering their genes.</description>
@@ -81,7 +81,7 @@
 
   <!-- Storm of Change -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_StormOfChange_Tzeentch</defName>
     <label>storm of change</label>
     <description>The psyker focuses his will and his wrath into an arial warp-flame that descends upon his enemies that mutates them, altering their genes.</description>
@@ -120,7 +120,7 @@
 
   <!-- Flickering Fire of Tzeentch -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_FlickeringFire</defName>
     <label>flickering flame of Tzeentch</label>
     <description>The psyker sends forth a spew of fire, engulfing the target, causing pain and injuries.</description>
@@ -158,7 +158,7 @@
 
   <!-- Tzeentch Firestorm -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_TzeentchFirestorm</defName>
     <label>tzeentch firestorm</label>
     <description>The psyker summons into existence a giant firestorm in an instant, creating a large explosion, burning everyone caught in it.</description>
@@ -210,7 +210,7 @@
 
   <!-- Boon of Tzeentch -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_BoonOfTzeentch</defName>
     <label>boon of tzeentch</label>
     <description>The psyker reaches deep into the warp for greater power, bolstering his already potent abilities further.</description>
@@ -238,7 +238,7 @@
 
   <!-- Warp-Flame Ward -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_WarpFlameWard</defName>
     <label>warp-flame ward</label>
     <description>The psyker calls on the Changer of Ways to wrap his form in arcane energies. Tendrils of these multihued flames orbits the psyker, eager to engulf those who dare attack him.</description>
@@ -269,7 +269,7 @@
 
   <!-- Summon Daemons of Tzeentch -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_SummonDaemonTzeentch</defName>
     <label>summon daemon of Tzeentch</label>
     <description>Summons a pink horror to help you.</description>
@@ -310,7 +310,7 @@
 
   <!-- Summon Greater Daemons of Tzeentch - self explanitory - have longer cooldown -->
 
-  <VFECore.Abilities.AbilityDef ParentName="VPE_PsycastBase">
+  <VFECore.Abilities.AbilityDef ParentName="BEWH_ExcludePsytrainerBase">
     <defName>BEWH_SummonGreaterDaemonTzeentch</defName>
     <label>summon greater daemon of Tzeentch (Not implemented)</label>
     <description>Coming soon!</description>
