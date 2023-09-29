@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--===== Tentacles =====-->
+    <HediffDef>
+        <defName>BEWH_MutationTentaclesRandom</defName>
+        <label>tentacle</label>
+        <description>This pawn has mutated an useless tentacle somewhere on their body.</description>
+        <everCurableByItem>true</everCurableByItem>
+        <defaultLabelColor>(0.8, 0.3, 0.3)</defaultLabelColor>
+        <isBad>true</isBad>
+        <hediffClass>Hediff_AddedPart</hediffClass>
+        <addedPartProps>
+            <solid>true</solid>
+            <partEfficiency>0</partEfficiency>
+            <betterThanNatural>false</betterThanNatural>
+          </addedPartProps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                </capMods>
+                <painOffset>0.02</painOffset>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

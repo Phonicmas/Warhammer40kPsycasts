@@ -12,14 +12,10 @@ namespace Psycasts40k
 
         //All mutation hediffs
         static List<HediffDef> mutations = new List<HediffDef> {
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationAdditionalEye"),
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationExtraLeg"),
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationExtraArm"),
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationTentacleReplacement"),
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationRottingFlesh"),
-            DefDatabase<HediffDef>.GetNamed("BEWH_MutationTentacleRandom")};
+            DefDatabase<HediffDef>.GetNamed("BEWH_MutationTentaclesRandom"),  
+            DefDatabase<HediffDef>.GetNamed("Carcinoma")};
 
-        public HediffCompProperties_AddMutation Props => (HediffCompProperties_AddMutation)props;
+    public HediffCompProperties_AddMutation Props => (HediffCompProperties_AddMutation)props;
 
         public override void CompPostMake()
         {
@@ -35,54 +31,33 @@ namespace Psycasts40k
             List<HediffDef> mutationsThatCanBeAdded = mutations;
 
             HediffDef hediffToAdd = mutationsThatCanBeAdded[rand.Next(0, mutationsThatCanBeAdded.Count)];
-            List<BodyPartDef> canApplyTo;
-
-            if (!hediffToAdd.HasModExtension<DefModExtension_Mutations>())
+            List<BodyPartDef> canApplyTo = new List<BodyPartDef>()
             {
-                canApplyTo = null;
-            }
-            else
-            {
-                canApplyTo = hediffToAdd.GetModExtension<DefModExtension_Mutations>().canApplyToPart;
-            }
+                DefDatabase<BodyPartDef>.GetNamed("Leg"),
+                DefDatabase<BodyPartDef>.GetNamed("Arm"),
+                DefDatabase<BodyPartDef>.GetNamed("Head"),
+            };
 
             List<BodyPartRecord> record = new List<BodyPartRecord>();
 
-            if (canApplyTo == null)
+            int j = 0;
+            //Makes list of bodyparts records for adding the hediff
+            while (j < canApplyTo.Count)
             {
-                pawn.health.AddHediff(hediffToAdd, null);
-            }
-            else
-            {
-                int j = 0;
-                //Makes list of bodyparts records for adding the hediff
-                while (j < canApplyTo.Count)
+                BodyPartDef part = canApplyTo[j];
+                List<BodyPartRecord> bpList = pawn.RaceProps.body.AllParts;
+                for (int k = 0; k < bpList.Count; k++)
                 {
-                    BodyPartDef part = canApplyTo[j];
-                    List<BodyPartRecord> bpList = pawn.RaceProps.body.AllParts;
-                    for (int k = 0; k < bpList.Count; k++)
+                    BodyPartRecord bodyPartRecord = bpList[k];
+                    if (bodyPartRecord.def == part)
                     {
-                        BodyPartRecord bodyPartRecord = bpList[k];
-                        if (bodyPartRecord.def == part)
-                        {
-                            record.Add(bodyPartRecord);
-                        }
+                        record.Add(bodyPartRecord);
                     }
-                    j += 1;
                 }
+                j += 1;
+            }
 
-                if (hediffToAdd.GetModExtension<DefModExtension_Mutations>().applyToAllParts)
-                {
-                    for (int i = 0; i < record.Count; i++)
-                    {
-                        pawn.health.AddHediff(hediffToAdd, record[i]);
-                    }
-                }
-                else
-                {
-                    pawn.health.AddHediff(hediffToAdd, record[rand.Next(0, record.Count)]);
-                }
-            }
+            pawn.health.AddHediff(hediffToAdd, record[rand.Next(0, record.Count)]);
 
         }
 

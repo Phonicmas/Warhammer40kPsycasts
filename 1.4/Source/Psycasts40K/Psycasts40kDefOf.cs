@@ -18,6 +18,8 @@ namespace Psycasts40k
 
         public static PawnKindDef BEWH_Plaguebearer;
 
+
+
         static Psycasts40kDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(Psycasts40kDefOf));
