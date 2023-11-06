@@ -6,7 +6,7 @@ using Verse;
 namespace Psycasts40k
 {
     [HarmonyPatch(typeof(ThingDefGenerator_Neurotrainer_ImpliedThingDefs_Patch), "ImpliedThingDefs")]
-    public class ExcludePsytrainer
+    public class ExcludePsytrainerVPE
     {
         public static IEnumerable<ThingDef> Postfix(IEnumerable<ThingDef> __result)
         {

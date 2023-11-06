@@ -68,7 +68,8 @@
   <ItemGroup>
     <Compile Include="Ability_MultiExplode.cs" />
     <Compile Include="DefModExtension_ExcludePsytrainer.cs" />
-    <Compile Include="HarmonyPatch_ExcludePsytrainers.cs" />
+    <Compile Include="HarmonyPatch_ExcludePsytrainersCore.cs" />
+    <Compile Include="HarmonyPatch_ExcludePsytrainersVPE.cs" />
     <Compile Include="MapComponent_Plaguebearer.cs" />
     <Compile Include="AbilityExtension_Psycast40k.cs" />
     <Compile Include="HarmonyPatch_EcstaticOblivion.cs" />
